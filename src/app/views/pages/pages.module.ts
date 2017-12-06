@@ -6,6 +6,7 @@ import { LoginComponent } from './login.component';
 import { RegisterComponent } from './register.component';
 
 import { PagesRoutingModule } from './pages-routing.module';
+import { HomeComponent } from './home.component';
 
 @NgModule({
   imports: [ PagesRoutingModule ],
@@ -13,7 +14,8 @@ import { PagesRoutingModule } from './pages-routing.module';
     P404Component,
     P500Component,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    HomeComponent
   ]
 })
 export class PagesModule { }

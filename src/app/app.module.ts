@@ -27,6 +27,7 @@ import {
   AppSidebarHeaderComponent,
   AppSidebarMinimizerComponent,
   APP_SIDEBAR_NAV
+  ,HomeHeaderComponent
 } from './components';
 
 const APP_COMPONENTS = [
@@ -39,7 +40,9 @@ const APP_COMPONENTS = [
   AppSidebarFormComponent,
   AppSidebarHeaderComponent,
   AppSidebarMinimizerComponent,
-  APP_SIDEBAR_NAV
+  APP_SIDEBAR_NAV,
+  HomeHeaderComponent
+  
 ]
 
 // Import directives
