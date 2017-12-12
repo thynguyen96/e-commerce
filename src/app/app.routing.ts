@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { Auth } from './_service/Auth';
 
 // Import Containers
 import {
@@ -24,7 +25,8 @@ export const routes: Routes = [
     children: [
       {
         path: 'dashboard',
-        loadChildren: './views/dashboard/dashboard.module#DashboardModule'
+        loadChildren: './views/dashboard/dashboard.module#DashboardModule',
+        // canActivate: [Auth]
       },
       {
         path: 'components',
@@ -75,6 +77,8 @@ export const routes: Routes = [
 
 @NgModule({
   imports: [ RouterModule.forRoot(routes) ],
-  exports: [ RouterModule ]
+  exports: [ RouterModule ],
+  // providers: [],
+  providers: [Auth],
 })
 export class AppRoutingModule {}
