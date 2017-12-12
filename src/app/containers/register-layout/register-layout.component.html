@@ -6,35 +6,51 @@
           <div class="card-body p-4">
             <h1>Register</h1>
             <p class="text-muted">Create your account</p>
-            <div class="input-group mb-3">
-              <span class="input-group-addon"><i class="icon-user"></i></span>
-              <input type="text" class="form-control" placeholder="Username">
-            </div>
+            <form (ngSubmit)="registerAdmin()" [formGroup]="formRegister">
+              <small class="form-text text-danger" *ngIf="formRegister.get('username').errors?.required && formRegister.get('username').touched">Username isn't blank!</small>
+              <div class="input-group mb-3">
+                <span class="input-group-addon">
+                  <i class="icon-user"></i>
+                </span>
+                <input type="text" class="form-control" placeholder="Username" formControlName="username" />
+              </div>
+              <small class="form-text text-danger" *ngIf="formRegister.get('email').errors?.required && formRegister.get('email').touched">Email isn't blank!</small>
+              
+              <div class="input-group mb-3">
+                <span class="input-group-addon">@</span>
+                <input type="email" class="form-control" placeholder="Email" formControlName="email" />
+              </div>
+              <small class="form-text text-danger" *ngIf="formRegister.get('password').errors?.required && formRegister.get('password').touched">Password isn't blank!</small>
+              
+              <div class="input-group mb-3">
+                <span class="input-group-addon">
+                  <i class="icon-lock"></i>
+                </span>
+                <input type="password" class="form-control" placeholder="Password" formControlName="password" />
+              </div>
+              <small class="form-text text-danger" *ngIf="formRegister.get('passwordConfirm').errors?.required && formRegister.get('passwordConfirm').touched">Password isn't blank!</small>
+              
+              <div class="input-group mb-4">
+                <span class="input-group-addon">
+                  <i class="icon-lock"></i>
+                </span>
+                <input type="password" class="form-control" placeholder="Repeat password" formControlName="passwordConfirm" />
+              </div>
 
-            <div class="input-group mb-3">
-              <span class="input-group-addon">@</span>
-              <input type="text" class="form-control" placeholder="Email">
-            </div>
-
-            <div class="input-group mb-3">
-              <span class="input-group-addon"><i class="icon-lock"></i></span>
-              <input type="password" class="form-control" placeholder="Password">
-            </div>
-
-            <div class="input-group mb-4">
-              <span class="input-group-addon"><i class="icon-lock"></i></span>
-              <input type="password" class="form-control" placeholder="Repeat password">
-            </div>
-
-            <button type="button" class="btn btn-block btn-success">Create Account</button>
+              <button type="submit" class="btn btn-block btn-success" [disabled]="formRegister.invalid">Create Account</button>
+            </form>
           </div>
           <div class="card-footer p-4">
             <div class="row">
               <div class="col-6">
-                <button class="btn btn-block btn-facebook" type="button"><span>facebook</span></button>
+                <button class="btn btn-block btn-facebook" type="button">
+                  <span>facebook</span>
+                </button>
               </div>
               <div class="col-6">
-                <button class="btn btn-block btn-twitter" type="button"><span>twitter</span></button>
+                <button class="btn btn-block btn-twitter" type="button">
+                  <span>twitter</span>
+                </button>
               </div>
             </div>
           </div>
