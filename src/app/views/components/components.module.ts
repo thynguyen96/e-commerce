@@ -23,10 +23,18 @@ import { TabsComponent } from './tabs.component';
 import { ComponentsRoutingModule } from './components-routing.module';
 
 import { ThemSanPhamComponent } from './them-san-pham.component';
+import { CommonModule } from '@angular/common/';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
   imports: [
+
+
+    FormsModule,
+   CommonModule,
+    ReactiveFormsModule,
+
     ComponentsRoutingModule,
     BsDropdownModule.forRoot(),
     ModalModule.forRoot(),
