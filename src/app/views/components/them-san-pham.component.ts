@@ -14,7 +14,9 @@ export class ThemSanPhamComponent implements OnInit{
   fetchData() {
     this.http.get("http://localhost:3004/products")
       .subscribe(
-      res => this.products = res.json())
+      res => { this.products = res.json() 
+       console.log(this.products)
+      })
   }
   addNewProduct(item){
     this.productObj = {
@@ -22,8 +24,14 @@ export class ThemSanPhamComponent implements OnInit{
       "quality": item.quality,
       "price": item.price
     }
+    
     this.http.post("http://localhost:3004/products", this.productObj).subscribe(
-      (res: Response) => alert(this.comfirmationString)
+      (res) => { 
+        let re: any = {} ;
+        re = res;
+        console.log(re._body);
+        this.products.push(JSON.parse(re._body));
+        alert(this.comfirmationString)}
     )
   }
 
