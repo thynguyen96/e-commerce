@@ -7,15 +7,28 @@ import { RegisterComponent } from './register.component';
 
 import { PagesRoutingModule } from './pages-routing.module';
 import { HomeComponent } from './home.component';
+import { HttpClientModule } from '@angular/common/http';
+import { loginMocktest } from 'app/_mocktest/LoginInterceptor';
+import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { prodcutRes } from 'app/_mocktest/ProductRest';
 
 @NgModule({
-  imports: [ PagesRoutingModule ],
+  imports: [ PagesRoutingModule,
+    CommonModule ,
+    ReactiveFormsModule,
+    FormsModule,
+  HttpClientModule ],
   declarations: [
     P404Component,
     P500Component,
     LoginComponent,
     RegisterComponent,
     HomeComponent
+  ]
+  ,providers : [
+    loginMocktest,
+    prodcutRes
   ]
 })
 export class PagesModule { }

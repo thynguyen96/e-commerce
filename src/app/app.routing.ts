@@ -9,6 +9,7 @@ import {
   LoginLayoutComponent,
   RegisterLayoutComponent
 } from './containers';
+import { loginMocktest } from 'app/_mocktest/LoginInterceptor';
 
 export const routes: Routes = [
   {
@@ -79,6 +80,8 @@ export const routes: Routes = [
   imports: [ RouterModule.forRoot(routes) ],
   exports: [ RouterModule ],
   // providers: [],
-  providers: [Auth],
+  providers: [Auth 
+   
+  ],
 })
 export class AppRoutingModule {}
