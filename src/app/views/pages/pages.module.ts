@@ -12,23 +12,29 @@ import { loginMocktest } from 'app/_mocktest/LoginInterceptor';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { prodcutRes } from 'app/_mocktest/ProductRest';
+import { BlogComponent } from './blog/blog.component';
+import { CategoryRes } from 'app/_mocktest/CategoryRes';
 
 @NgModule({
-  imports: [ PagesRoutingModule,
-    CommonModule ,
+  imports: [PagesRoutingModule,
+    CommonModule,
     ReactiveFormsModule,
     FormsModule,
-  HttpClientModule ],
+    HttpClientModule
+  ],
+  
   declarations: [
     P404Component,
     P500Component,
     LoginComponent,
     RegisterComponent,
-    HomeComponent
+    HomeComponent,
+    BlogComponent
   ]
-  ,providers : [
+  , providers: [
     loginMocktest,
-    prodcutRes
+    prodcutRes,
+    CategoryRes
   ]
 })
 export class PagesModule { }

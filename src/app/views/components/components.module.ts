@@ -25,20 +25,21 @@ import { ComponentsRoutingModule } from './components-routing.module';
 import { ThemSanPhamComponent } from './them-san-pham.component';
 import { CommonModule } from '@angular/common/';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { prodcutRes } from 'app/_mocktest/ProductRest';
+import { loginMocktest } from 'app/_mocktest/LoginInterceptor';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
   imports: [
-
-
     FormsModule,
-   CommonModule,
+    CommonModule,
     ReactiveFormsModule,
-
     ComponentsRoutingModule,
     BsDropdownModule.forRoot(),
     ModalModule.forRoot(),
-    TabsModule
+    TabsModule,
+    HttpClientModule
   ],
   declarations: [
     ButtonsComponent,
@@ -50,6 +51,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     TablesComponent,
     TabsComponent,
     ThemSanPhamComponent
+  ]
+  , providers: [
+    loginMocktest,
+    prodcutRes
   ]
 })
 export class ComponentsModule { }

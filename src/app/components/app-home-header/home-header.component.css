@@ -1,0 +1,9 @@
+.navbar-brand{
+    font-family: 'Pacifico', cursive;
+    color:#86BC42;
+    font-size: 3em;
+}
+
+.navbar-nav .nav-item .nav-link{
+    font-size: 18px;
+}

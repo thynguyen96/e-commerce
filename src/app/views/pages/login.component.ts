@@ -10,19 +10,19 @@ import { Router } from '@angular/router';
   templateUrl: 'login.component.html'
 })
 export class LoginComponent implements OnInit {
-  loading  = false;
+  loading = false;
   loginForm: FormGroup;
 
   thongbao: string;
- listProduct: any = [];
+  listProduct: any = [];
 
-  constructor(private http: HttpClient, private fb: FormBuilder , private router: Router ) {
-   
+  constructor(private http: HttpClient, private fb: FormBuilder, private router: Router) {
+
 
 
   }
   public _login(use: any) {
-  //  let use: any = {};
+    //  let use: any = {};
     //use.username = username ;
     //use.password = password ;;
     this.thongbao = null;;
@@ -31,28 +31,28 @@ export class LoginComponent implements OnInit {
       console.log(data);
       localStorage.setItem('token', data.token);
       this.loading = false;
-      this.thongbao = 'success' ;
+      this.thongbao = 'success';
       this.router.navigate(['/dashboard']);
     }, (err: HttpErrorResponse) => {
       if (err.status === 403) {
-        this.thongbao = 'tài khõa đã tồn tạ trong hệ thống' ;
+        this.thongbao = 'tài khõa đã tồn tạ trong hệ thống';
       }
       this.loading = false;
     });
   }
   ngOnInit() {
-    this.http.get('/api/products').subscribe( data  => {
+    this.http.get('/api/products').subscribe(data => {
       console.log('---')
       console.log(data);
-      this.listProduct = data ;
+      this.listProduct = data;
     })
     this.loginForm = this.fb.group({
       username: this.fb.control('', Validators.required),
       password: this.fb.control('', Validators.required)
     })
   }
- public login() {
-   this._login(this.loginForm.value);
+  public login() {
+    this._login(this.loginForm.value);
   }
 
 }

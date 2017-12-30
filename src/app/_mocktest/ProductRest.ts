@@ -35,7 +35,7 @@ export class ProductsInterceptor implements HttpInterceptor {
 
             // call materialize and dematerialize to ensure delay even if an error is thrown (https://github.com/Reactive-Extensions/RxJS/issues/648)
             .materialize()
-            .delay(3500) // thoi gian phản hồi của server
+            .delay(1000) // thoi gian phản hồi của server
             .dematerialize();
     }
 }
