@@ -25,6 +25,7 @@ import { ShoppingCartComponent } from 'app/views/pages/shopping-cart/shopping-ca
 import { HeaderComponent2 } from 'app/views/pages/header/header.component';
 import { PagesComponent } from 'app/views/pages/pages.component';
 import { FooterComponent2 } from 'app/views/pages/footer/footer.component';
+import { PopulatedCartRouteGuard } from 'app/route-gaurds/populated-cart.route-gaurd';
 
 @NgModule({
   imports: [PagesRoutingModule,
@@ -55,7 +56,7 @@ import { FooterComponent2 } from 'app/views/pages/footer/footer.component';
     CategoryRes,
     ProductsDataService,
     DeliveryOptionsDataService,
-   
+    PopulatedCartRouteGuard,
     { provide: StorageService, useClass: LocalStorageServie },
     {
       deps: [StorageService, ProductsDataService, DeliveryOptionsDataService],

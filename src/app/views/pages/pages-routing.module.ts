@@ -10,6 +10,7 @@ import { StoreFrontComponent } from './store-front/store-front.component';
 import { CheckoutComponent } from 'app/views/pages/checkout/checkout.component';
 import { OrderConfirmationComponent } from 'app/views/pages/order-confirmation/order-confirmation.component';
 import { PagesComponent } from 'app/views/pages/pages.component';
+import { PopulatedCartRouteGuard } from 'app/route-gaurds/populated-cart.route-gaurd';
 
 const routes: Routes = [
   {
@@ -69,12 +70,12 @@ const routes: Routes = [
         }
       },
       {
-        // canActivate: [PopulatedCartRouteGuard],
+        canActivate: [PopulatedCartRouteGuard],
         component: CheckoutComponent,
         path: "checkout"
     },
     {
-        // canActivate: [PopulatedCartRouteGuard],
+        canActivate: [PopulatedCartRouteGuard],
         component: OrderConfirmationComponent,
         path: "confirmed"
     },
