@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
   loading = false;
-  loginForm: FormGroup;
+  loginForm: FormGroup; 
 
   thongbao: string;
   listProduct: any = [];

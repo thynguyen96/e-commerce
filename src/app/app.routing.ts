@@ -64,7 +64,7 @@ export const routes: Routes = [
     path: 'login',
     component: LoginLayoutComponent,
     data: {
-      title: 'Login'
+      title: 'Login' 
     }
   },
   {

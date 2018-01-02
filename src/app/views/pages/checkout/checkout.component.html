@@ -1,0 +1,69 @@
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-7">
+      <h4>Giỏ hàng của bạn</h4>
+      <div class="row">
+        <table class="table">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">Hình ảnh</th>
+              <th scope="col">Tên sản phẩm</th>
+              <th scope="col">Giá</th>
+              <th scope="col">Số lượng</th>
+              <th scope="col">Tổng</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of cartItems">
+              <td>
+                <img src="./assets/{{item.product.id}}.png" class="product_image" />
+              </td>
+              <td>{{item.product.name}}</td>
+              <td>{{item.product.price | currency:'GBP':true}}</td>
+              <td>{{item.quantity}}</td>
+              <td>{{item.totalCost | currency:'GBP':true}}</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div>
+          Tổng tiền: {{(cart | async).grossTotal | currency:'GBP':true}}
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <!-- <div class="row"> -->
+      <div class="row delivery-option">
+        
+
+        <div class="col-md-12">
+            <h4>Hình thức thanh toán</h4>
+            <ul *ngFor="let option of deliveryOptions | async">
+                <li>
+                  <input type="radio" name="delivery_option" id="{{option.name}}" [checked]="option.id === (cart | async).deliveryOptionId"
+                    (click)="setDeliveryOption(option)" />
+                    <label for="{{option.name}}" (click)="setDeliveryOption(option)">{{option.name}} </label>
+                    <span>{{option.price | currency:'GBP':true}}</span>
+                </li>
+                <li>{{option.description}}</li>
+              </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="">
+          <h5 class="text--red" *ngIf="(cart | async).deliveryOptionId === undefined">Please select a delivery option...</h5>
+          <a class="success button large" *ngIf="(cart | async).deliveryOptionId !== undefined"  [routerLink]="['/pages/confirmed']">Purchase Order</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div>
+      <a class="warning button expanded" [routerLink]="['/pages']">Tiếp tục mua sắm</a>
+    </div>
+  </div>
+</div>

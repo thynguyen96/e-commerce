@@ -1,0 +1,121 @@
+/*----------  0.1. Color  ----------*/
+
+.header-topbar .link:hover,
+.button-search:hover,
+.categories-widget .widget-list .single-widget-item:hover .link,
+.tags-widget .tag:hover,
+.tags .list-tag .tag:hover,
+.tags-widget .tag:hover:before,
+.social-widget .social-icon:hover,
+.btn:hover,
+.btn.btn-maincolor:hover,
+.btn.btn-transparent:hover,
+.block-1 .block-content .title:hover,
+.block-1 .block-content .author .link:hover,
+.block-1 .block-content .readmore:hover,
+.block-1 .block-info .block .link:hover,
+.block-2 .block-content .title:hover,
+.block-2 .block-content .author .link:hover,
+.block-2 .block-content .readmore:hover,
+.block-2 .block-info .block .link:hover,
+.block-3 .block-content .title:hover,
+.block-3 .block-content .list-social .link:hover,
+.block-4 .block-content .prices-wrapper .prices sup,
+.block-4 .block-content .prices-wrapper .prices .number,
+.block-6 .block-content .prices-wrapper .prices sup,
+.block-6 .block-content .prices-wrapper .prices .number,
+.block-products .prices sup,
+.block-products .prices .number,
+.block-icon-1 .icons,
+.block-icon-2 .icons,
+.block-icon-3 .icons,
+.tab-menu li.active .link,
+.tab-menu .link:hover,
+.tab-menu.white .link:hover,
+.pagination li .btn-pagination:hover,
+.pagination li .btn-pagination:focus,
+.pagination li .btn-pagination.active,
+.pagination li .previous:hover,
+.pagination li .next:hover,
+#back-top .gamba-circles,
+.background-slide .slick-dots li.slick-active button:before,
+.banner-1-wrapper .subtitle,
+.list-images .slick-prev:hover:before,
+.list-images .slick-next:hover:before,
+.banner-text-wrapper .title .main-color,
+.morepage-banner .breadcrumb li .link:hover,
+.info-detail .prices-wrapper .prices sup,
+.info-detail .prices-wrapper .prices .number,
+.information-tab .nav-tabs > li > a:focus,
+.information-tab .nav-tabs > li > a:hover,
+.information-tab .nav-tabs > li > a:focus .number-review,
+.information-tab .nav-tabs > li > a:hover .number-review,
+.info-detail .btn-addtocwishlish button.btn-maincolor:hover,
+.shop-table .cart-item .woocommerce-Price.amount,
+.shopping-cart .cart-totals .woocommerce-Price,
+.discount-shipping-payment .payment-code .subtotal .woocommerce-Price.amount,
+.checkout-form .form-label .highlight,
+.cart-totals .woocommerce-Price.amount,
+.woocommerce-checkout-payment li label:after,
+.woocommerce-checkout-payment .payment_method_paypal .about_paypal,
+.blog-detail-wrapper .content-wrapper .block-info .block .link:hover,
+.blog-detail-wrapper .content-wrapper .block-info .block .title:hover,
+.blog-author .media-right .author:hover,
+.blog-comment .comment-list .comment-right .btn.btn-crystal:hover,
+.coming-soon-event-wrapper.white .btn:hover,
+.coming-soon-event-wrapper .infomation .title,
+.more-event .coming-soon-event-wrapper .coming-soon-count .count-wrapper .time .count,
+.contact-method .method-item i,
+.contact-form .form-label .highlight {
+    color: #86bc42;
+}
+
+/*----------  0.2. background Color  ----------*/
+
+.header-topbar .topbar-left .link .cart-counter,
+.header-topbar .topbar-right.style-2 .link .cart-counter,
+.header-main.header-fixed .nav-search form .searchbutton,
+.mb-search .line-boder,
+.datepicker thead .next:hover:before,
+.datepicker thead .prev:hover:before,
+.datepicker tbody td.day.active:before,
+.datepicker tbody td.day.range-end:before,
+.datepicker tbody td.day.range-start:before,
+.btn.btn-maincolor,
+.block-4:hover .block-content,
+.block-5 .block-content,
+.block-6:hover .block-content,
+.block-icon-2:hover .gamba-circles .circle,
+.tab-menu .link:before,
+.subscribe-email .subscribe-email-wrapper,
+.banner-3 .right-infomation,
+.banner-5:before,
+.tab-vertical .tab-list li.active:before,
+.information-tab .nav-tabs > li > a:before,
+.shop-table thead,
+.block-1 .mejs-container .mejs-controls .mejs-time-rail .mejs-time-loaded,
+.block-1 .mejs-container .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current {
+    background-color: #86bc42;
+}
+
+/*----------  0.3. border Color  ----------*/
+
+.tags-widget .tag:hover,
+.tags .list-tag .tag:hover,
+.btn:hover,
+.btn.btn-maincolor,
+.btn.btn-maincolor:hover,
+.pagination li .previous:hover,
+.pagination li .next:hover,
+#back-top .gamba-circles .circle,
+.info-detail .btn-addtocwishlish button.btn-maincolor:hover,
+.woocommerce-checkout-payment li input[type='radio']:checked + label:before,
+.woocommerce-checkout-payment li label:hover:before {
+    border-color: #86bc42;
+}
+
+/*----------  0.4 Custome  ----------*/
+
+.nav-search form .searchbutton {
+    background-color: #b6d78d;
+}
